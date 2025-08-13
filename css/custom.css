@@ -1,19 +1,20 @@
 /* GLOBAL STYLES
 ---------------------------------------------------------------- */
-#main {
+#header_div {
   display: flex;
 }
 
-#main div {
+#header_div div {
   font-size: 25px;
   flex: 1;
 }
 
 nav{
+  z-index: 2;
   position: fixed;
   width: 100%;
-  margin-top: 80px;
-  margin-left: 180px;
+  padding-top: 5px;
+  padding-left: 180px;
 }
 
 .link{
@@ -27,6 +28,43 @@ nav{
   font-size: 27px;
 }
 
-html{
+html,body{
   background-color: #E5E5E5;
+  height:100%;
+  padding:0;
+  margin:0;
+  width:100%;
+  box-sizing: border-box;
+}
+
+main{
+  padding-top: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+section{
+  text-align: center;
+}
+
+.big-box-link {
+  font-size: large;
+  display: block; /* Make the anchor act like a block-level element */
+  width: 110px; /* Set a fixed width for the box */
+  height: 60px; /* Set a fixed height for the box */
+  padding: 10px; /* Add some padding around the text */
+  background-color: #f0f0f0; /* Set a background color */
+  border: 1px solid #ccc; /* Add a border for visual appeal */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove the default underline */
+  color: #333; /* Set text color */
+  line-height: 100px; /* Vertically align the text (adjust as needed) */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.big-box-link:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+  line-height: 40px;
+  /*transition: line-height 0.2s ease-in-out;*/
 }
