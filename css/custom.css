@@ -48,6 +48,10 @@ section{
   text-align: center;
 }
 
+footer{
+
+}
+
 .big-box-link {
   font-size: large;
   display: block; /* Make the anchor act like a block-level element */
@@ -67,4 +71,28 @@ section{
   background-color: #e0e0e0; /* Change background on hover */
   line-height: 40px;
   /*transition: line-height 0.2s ease-in-out;*/
+}
+
+.round-button {
+  position: fixed;
+  bottom: 0; /* Aligns to the bottom edge of the viewport */
+  right: 0;  /* Aligns to the right edge of the viewport */
+  /* Optional: Add padding for spacing from the edges */
+  padding: 10px;
+  display:block;
+  width:80px;
+  height:80px;
+  line-height:80px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color:#f5f5f5;
+  text-align:center;
+  text-decoration:none;
+  background: #555777;
+  box-shadow: 0 0 3px gray;
+  font-size:20px;
+  font-weight:bold;
+}
+.round-button:hover {
+  background: #777555;
 }
