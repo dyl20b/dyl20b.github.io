@@ -1,6 +1,32 @@
 /* GLOBAL STYLES
 ---------------------------------------------------------------- */
-h1{
-  text-align: center;
-  font-size: 60px;
+#main {
+  display: flex;
+}
+
+#main div {
+  font-size: 25px;
+  flex: 1;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  margin-top: 80px;
+  margin-left: 180px;
+}
+
+.link{
+  text-decoration: none;
+  cursor: pointer;
+  color: darkslategrey;
+  transition: font-size 0.1s ease-in-out;
+}
+
+.link:hover {
+  font-size: 27px;
+}
+
+html{
+  background-color: #E5E5E5;
 }
