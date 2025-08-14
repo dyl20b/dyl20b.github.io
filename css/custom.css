@@ -1,6 +1,98 @@
 /* GLOBAL STYLES
 ---------------------------------------------------------------- */
-h1{
+#header_div {
+  display: flex;
+}
+
+#header_div div {
+  font-size: 25px;
+  flex: 1;
+}
+
+nav{
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 180px;
+}
+
+.link{
+  text-decoration: none;
+  cursor: pointer;
+  color: darkslategrey;
+  transition: font-size 0.1s ease-in-out;
+}
+
+.link:hover {
+  font-size: 27px;
+}
+
+html,body{
+  background-color: #E5E5E5;
+  height:100%;
+  padding:0;
+  margin:0;
+  width:100%;
+  box-sizing: border-box;
+}
+
+main{
+  padding-top: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+section{
   text-align: center;
-  font-size: 60px;
+}
+
+footer{
+
+}
+
+.big-box-link {
+  font-size: large;
+  display: block; /* Make the anchor act like a block-level element */
+  width: 110px; /* Set a fixed width for the box */
+  height: 60px; /* Set a fixed height for the box */
+  padding: 10px; /* Add some padding around the text */
+  background-color: #f0f0f0; /* Set a background color */
+  border: 1px solid #ccc; /* Add a border for visual appeal */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove the default underline */
+  color: #333; /* Set text color */
+  line-height: 100px; /* Vertically align the text (adjust as needed) */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.big-box-link:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+  line-height: 40px;
+  /*transition: line-height 0.2s ease-in-out;*/
+}
+
+.round-button {
+  position: fixed;
+  bottom: 0; /* Aligns to the bottom edge of the viewport */
+  right: 0;  /* Aligns to the right edge of the viewport */
+  /* Optional: Add padding for spacing from the edges */
+  padding: 10px;
+  display:block;
+  width:80px;
+  height:80px;
+  line-height:80px;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  color:#f5f5f5;
+  text-align:center;
+  text-decoration:none;
+  background: #555777;
+  box-shadow: 0 0 3px gray;
+  font-size:20px;
+  font-weight:bold;
+}
+.round-button:hover {
+  background: #777555;
 }
