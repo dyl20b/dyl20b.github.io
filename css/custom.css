@@ -1,98 +1,118 @@
 /* GLOBAL STYLES
 ---------------------------------------------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
 #header_div {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
 }
-
-#header_div div {
-  font-size: 25px;
-  flex: 1;
-}
-
-nav{
-  z-index: 2;
-  position: fixed;
-  width: 100%;
-  padding-top: 5px;
-  padding-left: 180px;
-}
-
-.link{
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between image and text */
   text-decoration: none;
-  cursor: pointer;
-  color: darkslategrey;
-  transition: font-size 0.1s ease-in-out;
+}
+.logo img {
+  height: 60px; /* adjust as needed */
+  width: auto;
+}
+.logo p {
+  margin: 0;
+  font-size: x-large;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.big-box-link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.link:hover {
-  font-size: 27px;
-}
+/*#header_div div {*/
+/*  font-size: 25px;*/
+/*  flex: 1;*/
+/*}*/
+
+/*nav{*/
+/*  z-index: 2;*/
+/*  position: fixed;*/
+/*  width: 100%;*/
+/*  padding-top: 5px;*/
+/*  padding-left: 180px;*/
+/*}*/
+
+/*.link{*/
+/*  text-decoration: none;*/
+/*  cursor: pointer;*/
+/*  color: darkslategrey;*/
+/*  transition: font-size 0.1s ease-in-out;*/
+/*}*/
+
+/*.link:hover {*/
+/*  font-size: 27px;*/
+/*}*/
 
 html,body{
   background-color: #E5E5E5;
   height:100%;
   padding:0;
+  /*padding-top: 90px; !* adjust to navbar height *!*/
   margin:0;
   width:100%;
   box-sizing: border-box;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+}
 main{
-  padding-top: 200px;
+  margin-top: 80px;
+  /*padding-top: 200px;*/
   height: 100%;
   box-sizing: border-box;
   position: relative;
 }
-
+#main-content {
+  flex: 1; /* Pushes the footer to the very bottom */
+}
+#main-content img {
+  display: block; /* Removes the bottom text-baseline gap */
+  object-fit: cover; /* Keeps image proportions clean */
+}
 section{
   text-align: center;
 }
-
 footer{
-
 }
 
-.big-box-link {
-  font-size: large;
-  display: block; /* Make the anchor act like a block-level element */
-  width: 110px; /* Set a fixed width for the box */
-  height: 60px; /* Set a fixed height for the box */
-  padding: 10px; /* Add some padding around the text */
-  background-color: #f0f0f0; /* Set a background color */
-  border: 1px solid #ccc; /* Add a border for visual appeal */
-  text-align: center; /* Center the text horizontally */
-  text-decoration: none; /* Remove the default underline */
-  color: #333; /* Set text color */
-  line-height: 100px; /* Vertically align the text (adjust as needed) */
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
+/*.big-box-link {*/
+/*  font-size: large;*/
+/*  display: block; !* Make the anchor act like a block-level element *!*/
+/*  width: 110px; !* Set a fixed width for the box *!*/
+/*  height: 60px; !* Set a fixed height for the box *!*/
+/*  padding: 10px; !* Add some padding around the text *!*/
+/*  background-color: #f0f0f0; !* Set a background color *!*/
+/*  border: 1px solid #ccc; !* Add a border for visual appeal *!*/
+/*  text-align: center; !* Center the text horizontally *!*/
+/*  text-decoration: none; !* Remove the default underline *!*/
+/*  color: #333; !* Set text color *!*/
+/*  line-height: 100px; !* Vertically align the text (adjust as needed) *!*/
+/*  cursor: pointer; !* Change cursor to pointer on hover *!*/
+/*}*/
 
-.big-box-link:hover {
-  background-color: #e0e0e0; /* Change background on hover */
-  line-height: 40px;
-  /*transition: line-height 0.2s ease-in-out;*/
-}
-
-.round-button {
-  position: fixed;
-  bottom: 0; /* Aligns to the bottom edge of the viewport */
-  right: 0;  /* Aligns to the right edge of the viewport */
-  /* Optional: Add padding for spacing from the edges */
-  padding: 10px;
-  display:block;
-  width:80px;
-  height:80px;
-  line-height:80px;
-  border: 2px solid #f5f5f5;
-  border-radius: 50%;
-  color:#f5f5f5;
-  text-align:center;
-  text-decoration:none;
-  background: #555777;
-  box-shadow: 0 0 3px gray;
-  font-size:20px;
-  font-weight:bold;
-}
-.round-button:hover {
-  background: #777555;
-}
+/*.big-box-link:hover {*/
+/*  background-color: #e0e0e0; !* Change background on hover *!*/
+/*  line-height: 40px;*/
+/*  !*transition: line-height 0.2s ease-in-out;*!*/
+/*}*/
