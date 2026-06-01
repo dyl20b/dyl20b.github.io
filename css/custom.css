@@ -1,5 +1,14 @@
 /* GLOBAL STYLES
 ---------------------------------------------------------------- */
+/* <weight>: Use a value from 300 to 700
+   <uniquifier>: Use a unique and descriptive class name
+.red-hat-text-<uniquifier> {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
 nav {
   position: fixed;
   top: 0;
@@ -35,7 +44,14 @@ nav {
 }
 .nav-links {
   display: flex;
-  gap: 30px;
+  list-style: none;
+  gap: 25px;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
 }
 .big-box-link {
   text-decoration: none;
@@ -50,6 +66,59 @@ nav {
 }
 .big-box-link:hover {
   color: #0376b7;
+}
+.big-box-link-dropdown {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Red Hat Text", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.big-box-link-dropdown:hover {
+  color: #0376b7;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0376b7;
+  padding: 10px 0;
+  border-radius: 10px;
+  list-style: none;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+.dropdown-menu li a {
+  font-family: "Red Hat Text", serif;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  display: block;
+}
+.dropdown-menu li a:hover {
+  font-family: "Red Hat Text", serif;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #b2b7bb;
+  display: block;
+}
+.dropdown-menu.show {
+  display: flex;
+  white-space: nowrap;
 }
 
 html,body{
@@ -295,17 +364,17 @@ section{
 
 .preview-card h3 {
   margin: 20px 20px 10px;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-family: "Red Hat Text", serif;
-  font-weight: normal;
+  font-weight: bold;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #111827;
+  color: #0376b7;
 }
 
 .preview-card p {
   margin: 0 20px 25px;
-  color: #0376b7;
+  color: #b2b7bb;
   font-weight: 600;
   font-family: "Red Hat Text", serif;
   font-optical-sizing: auto;
@@ -319,13 +388,34 @@ section{
   }
 }
 /*--------END SPLASH PAGE---------*/
-/* <weight>: Use a value from 300 to 700
-   <uniquifier>: Use a unique and descriptive class name
-
-.red-hat-text-<uniquifier> {
-  font-family: "Red Hat Text", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+.circuit-divider {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 60px 0;
 }
-*/
+
+.circuit-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: #0376b7;
+}
+
+.circuit-divider span {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 16px;
+  height: 16px;
+  background: #0376b7;
+  border-radius: 50%;
+
+  box-shadow:
+          0 0 10px rgba(245,158,11,.6);
+}

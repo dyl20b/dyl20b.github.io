@@ -40,3 +40,22 @@ document.querySelectorAll('nav a').forEach(link => {
 window.addEventListener('popstate', () => {
     loadPage(window.location.pathname);
 });
+
+// Handles the Services dropdown on the navigation bar
+document.addEventListener("DOMContentLoaded", function () {
+    const dropBtn = document.querySelector(".big-box-link-dropdown");
+    const menu = document.querySelector(".dropdown-menu");
+
+    dropBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        menu.classList.toggle("show");
+    });
+
+    // close when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".dropdown")) {
+            menu.classList.remove("show");
+        }
+    });
+});
