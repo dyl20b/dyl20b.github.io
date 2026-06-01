@@ -1,4 +1,4 @@
-// Function to handle the content switching
+// content switching
 async function loadPage(url) {
     try {
         const response = await fetch(url);
@@ -14,7 +14,7 @@ async function loadPage(url) {
         const newContent = doc.querySelector('#main-content').innerHTML;
         const newTitle = doc.querySelector('title').innerText;
 
-        // Update the current page browser title and main content
+        // Update the current page title and content
         document.title = newTitle;
         document.querySelector('#main-content').innerHTML = newContent;
     } catch (error) {

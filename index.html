@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!-- <meta content="Switchgear International"> -->
     <link href="css/custom.css" rel="stylesheet">
 <!--    <script src="gsap.min.js"></script>-->
-    <title>Webpage Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <title>Switchgear Services International</title>
   </head>
 
   <body>
@@ -15,25 +17,119 @@
           <img src="images/boltLogo.png" alt="Switchgear Services Logo">
           <p>Switchgear Services International</p>
         </a>
-
         <div class="nav-links">
           <a href="/pages/services.html" class="big-box-link">Services</a>
+          <a href="/pages/locations.html" class="big-box-link">Locations</a>
           <a href="/pages/about.html" class="big-box-link">About Us</a>
           <a href="/pages/contact.html" class="big-box-link">Contact</a>
         </div>
       </div>
     </nav>
 
-    <main id="main-content">
-        <img src="images/mainImage.jpg" style="height: 100%; width: 100%">
-    </main>
+    <section class="services-preview">
+      <div class="preview-card">
+        <img src="images/image7.jpg" alt="Electrical Testing">
+        <h3>Testing</h3>
+        <p>Safe • Accurate • Reliable</p>
+        <p style="color: black">
+          Curabitur vehicula lorem vitae ante tincidunt, porta fringilla augue bibendum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas faucibus dolor a rutrum iaculis.
+        </p>
+      </div>
+      <div class="preview-card">
+        <img src="images/image2.jpg" alt="Preventive Maintenance">
+        <h3>Maintenance</h3>
+        <p>Prevent • Protect • Extend</p>
+        <p style="color: black">
+          Nulla venenatis a nulla at maximus. Etiam pulvinar congue tellus, eget tincidunt dolor accumsan vel.
+          Praesent at ipsum id nisi imperdiet mollis ut sed sem. Suspendisse potenti.
+          Curabitur vehicula lorem vitae ante tincidunt
+        </p>
+      </div>
+      <div class="preview-card">
+        <img src="images/image5.jpg" alt="Engineering Services">
+        <h3>Engineering</h3>
+        <p>Design • Analyze • Deliver</p>
+        <p style="color: black">
+          Venenatis a nulla at maximus. Etiam pulvinar congue tellus, eget tincidunt dolor accumsan vel.
+          Praesent at ipsum id nisi imperdiet mollis ut sed sem. Suspendisse potenti.
+          Curabitur vehicula lorem vitae ante tincidunt
+        </p>
+      </div>
+    </section>
 
-    <footer>
-        <p>STAFF LISTING: AJKSFNASFAKF K AFL AE FLE LF SELF </p>
-        <p>PHONE: AJKSFNASFAASDD S A  ADDKF K AFL AE FLE LF SELF </p>
-        <p>LOCATION: sssda sdad  K AFL AE FLE LF SELF </p>
+    <section class="intro-split" id="main-content">
+      <div class="intro-content">
+        <span class="intro-tag">CONSISTENCY DELIVERED</span>
+        <h1>Professional Testing & Maintenance Services</h1>
+        <p>
+          Nulla venenatis a nulla at maximus. Etiam pulvinar congue tellus, eget tincidunt dolor accumsan vel.
+          Praesent at ipsum id nisi imperdiet mollis ut sed sem. Suspendisse potenti.
+          Curabitur vehicula lorem vitae ante tincidunt, porta fringilla augue bibendum.
+          Phasellus fermentum velit sem, et fermentum sapien finibus a. Nam egestas molestie rhoncus.
+          Pellentesque porta lectus ut tellus porta, et hendrerit nisi varius
+        </p>
+        <p>
+          Maecenas ullamcorper arcu sit amet lacinia ullamcorper. Donec eleifend condimentum elit, lobortis aliquam magna convallis et.
+          Fusce quis nibh hendrerit, tristique dolor sit amet, convallis velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas faucibus dolor a rutrum iaculis.
+        </p>
+        <div class="intro-buttons">
+          <a href="/pages/services.html" class="btn-secondary" >
+            View Services
+          </a>
+        </div>
+      </div>
+      <div class="intro-form">
+        <div class="form-card">
+          <h2>Get a Free Consultation</h2>
+          <form>
+            <input type="text" placeholder="Company Name" required>
+            <input type="text" placeholder="Contact Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number">
+            <textarea
+                    placeholder="Tell us about your project..."
+                    rows="5"></textarea>
+            <button type="submit">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+
+        <div class="footer-section company-info">
+          <h2>Switchgear Services International</h2>
+          <p>
+            A Small Business Administration (SBA) Company.<br>
+            Certified Service-Disabled Veteran-Owned Small Business (SDVOSB)
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>📍 Servicing Central East Coast and International</li>
+            <li>📞 (404) 664-3567</li>
+            <li>✉ TBD</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/services.html">Services</a></li>
+            <li><a href="/pages/about.html">About Us</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
+
     <script src="content-route.js"></script>
   </body>
-<!--  <a href="http://example.com" class="round-button">Button</a>-->
 </html>
