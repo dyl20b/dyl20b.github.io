@@ -474,3 +474,9 @@ section{
   opacity: .9;
 }
 /*--------END CONTACT PAGE---------*/
+/*--------BEGIN LOCATIONS PAGE---------*/
+#map {
+  height: 500px;
+}
+/*--------END LOCATIONS PAGE---------*/
+

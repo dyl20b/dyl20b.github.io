@@ -35,11 +35,12 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 
 });
-
 // Handle browser Back/Forward button clicks
 window.addEventListener('popstate', () => {
     loadPage(window.location.pathname);
 });
+
+
 
 // Handles the Services dropdown on the navigation bar
 document.addEventListener("DOMContentLoaded", function () {
@@ -59,3 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// For the locations map
+const key = 'NLaPx8YGfc7xsm4hi2FR';
+const map = L.map('map').setView([27.6386, -80.3973], 9);
+
+const mtLayer = L.maptiler.maptilerLayer({
+    apiKey: key,
+    style: L.maptiler.MapStyle.OUTDOOR, // optional
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([27.816, -80.47]).addTo(map);
+marker.bindPopup("<b>Switchgear Services International - Main</b><br>(404) 664-3567").openPopup();
