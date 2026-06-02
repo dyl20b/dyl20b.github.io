@@ -478,5 +478,50 @@ section{
 #map {
   height: 500px;
 }
+.map-form {
+  display: flex;
+  justify-content: center;
+  padding: 40px 40px;
+  margin: 80px 0;
+}
+.map-form-card {
+  background: white;
+  padding: 35px;
+  margin: 5px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow:
+          0 20px 50px rgba(0,0,0,.08);
+}
+.map-form-card-secondary {
+  background: #0376b7;
+  padding: 35px;
+  margin: 5px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow:
+          0 20px 50px rgba(0,0,0,.08);
+}
+.map-form-card-secondary h2 {
+  margin-bottom: 25px;
+  color: white;
+  font-size: 2rem;
+  font-family: "Red Hat Text", serif;
+  font-weight: bold;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: underline;
+}
+.map-form-card-secondary p {
+  margin-bottom: 25px;
+  color: white;
+  font-size: 1rem;
+  font-family: "Red Hat Text", serif;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 /*--------END LOCATIONS PAGE---------*/
 
