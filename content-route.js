@@ -62,15 +62,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // For the locations map
-document.addEventListener("DOMContentLoaded", function() {
-    const L = window.L;
-    const key = 'NLaPx8YGfc7xsm4hi2FR';
-    const map = L.map('map').setView([27.6386, -80.3973], 9);
-    const mtLayer = L.maptiler.maptilerLayer({
-        apiKey: key,
-        style: L.maptiler.MapStyle.OUTDOOR, // optional
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-    const marker = L.marker([27.816, -80.47]).addTo(map);
-    marker.bindPopup("<b>Switchgear Services International - Main</b><br>(404) 664-3567").openPopup();
-});
+
+// Select the node that will be the parent of the dynamic div
+const targetNode = document.getElementById('main-content');
+
+// Options for the observer (monitor child elements)
+const config = { childList: true, subtree: true };
+
+// Callback function to execute when mutations are observed
+const callback = (mutationList, observer) => {
+    for (const mutation of mutationList) {
+        if (mutation.type === 'childList') {
+            const myElement = document.getElementById('map');
+            if (myElement) {
+                // Element has been created! Do your work here.
+                console.log('Div has been loaded!');
+                const container = document.getElementById('map')
+                if(container) {
+                    const L = window.L;
+                    const key = 'NLaPx8YGfc7xsm4hi2FR';
+                    const map = L.map('map').setView([27.6386, -80.3973], 9);
+                    const mtLayer = L.maptiler.maptilerLayer({
+                        apiKey: key,
+                        style: L.maptiler.MapStyle.OUTDOOR, // optional
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+                    const marker = L.marker([27.816, -80.47]).addTo(map);
+                    marker.bindPopup("<b>Switchgear Services International - Main</b><br>(404) 664-3567").openPopup();
+                }
+
+                // Optional: Stop observing once the element is found
+                observer.disconnect();
+            }
+        }
+    }
+};
+// Create an observer instance linked to the callback
+const observer = new MutationObserver(callback);
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
