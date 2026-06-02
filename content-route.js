@@ -92,7 +92,8 @@ const callback = (mutationList, observer) => {
                 }
 
                 // Optional: Stop observing once the element is found
-                observer.disconnect();
+                //observer.disconnect();
+                // disconnecting seems to cause an issue where revisiting the locations page loses the map
             }
         }
     }
