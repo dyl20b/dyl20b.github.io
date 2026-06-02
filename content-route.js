@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // For the locations map
 document.addEventListener("DOMContentLoaded", function() {
+    const L = window.L;
     const key = 'NLaPx8YGfc7xsm4hi2FR';
     const map = L.map('map').setView([27.6386, -80.3973], 9);
     const mtLayer = L.maptiler.maptilerLayer({
@@ -70,6 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
         style: L.maptiler.MapStyle.OUTDOOR, // optional
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-    var marker = L.marker([27.816, -80.47]).addTo(map);
+    const marker = L.marker([27.816, -80.47]).addTo(map);
     marker.bindPopup("<b>Switchgear Services International - Main</b><br>(404) 664-3567").openPopup();
 });
